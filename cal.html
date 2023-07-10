@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cal.css">
+
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="input">
+      <h2>calculater</h2>
+      <input type="text" id="inpu" placeholder="0" autofocus >
+
+    </div>
+
+    <div class="my">
+      <div class="box"><button onclick="document.getElementById('inpu').value+=8">8</button></div>
+
+      <div class="box"><button onclick="document.getElementById('inpu').value+=9">9</button></div>
+      <div class="box"><button onclick="document.getElementById('inpu').value=''">CE</button></div>
+      <div class="box"><button onclick="call()">C</button></div>
+
+      <div class="box"><button onclick="document.getElementById('inpu').value+=7">7</button></div>
+      <div class="box"><button onclick="document.getElementById('inpu').value+=6">6</button></div>
+
+     
+      <div class="box"><button onclick="document.getElementById('inpu').value+=5">5</button></div>
+      <div class="box"><button onclick="document.getElementById('inpu').value+='+'">+</button></div>
+      <div class="box"><button onclick="document.getElementById('inpu').value+=4">4</button></div>
+    
+      <div class="box"><button onclick="document.getElementById('inpu').value+=3">3</button></div>
+      
+      <div class="box"><button onclick="document.getElementById('inpu').value+=2">2</button></div>
+      <div class="box"><button onclick="document.getElementById('inpu').value+='-'">-</button></div>
+     
+      <div class="box"><button onclick="document.getElementById('inpu').value+=1">1</button></div>
+
+      <div class="box"><button onclick="document.getElementById('inpu').value+=0">0</button></div>
+      <div class="box"><button onclick="document.getElementById('inpu').value+='.'">.</button></div>
+      <div class="box"><button onclick="document.getElementById('inpu').value+='*'">*</button></div>
+      <div class="box"><button onclick="document.getElementById('inpu').value+='/'">/</button></div>
+      <div class="box"><button id="bt"
+onclick="document.getElementById('inpu').value=eval(document.getElementById('inpu').value)">=</button></div>
+
+    </div>
+  </div>
+  <script>
+      function call(){
+           let a=document.getElementById("inpu").value;
+          a=a.slice(0,-1);
+           document.getElementById("inpu").value=a;
+      }
+
+  </script>
+
+</body>
+
+</html>
